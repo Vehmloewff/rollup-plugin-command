@@ -1,6 +1,6 @@
 # rollup-plugin-run
 
-Run commands and call functions sequentially when bundles are generated
+Run commands and call functions when bundles are generated
 
 ## Installation
 
@@ -21,18 +21,21 @@ export default {
 		run(`node tests.js`),
 	],
 	// ...
-}
+};
 ```
 
 ```js
-run(require('tests.js'))
+run(require('tests.js'));
 ```
 
 ```js
-run([
-	`npm test`,
-	require('./scripts/cleanup')
-], { quitOnFail: true }) // Default for options.quitOnDefault is false.
+run(
+	[
+		`npm test`, // The next command will not be executed until this one is finished
+		require('./scripts/cleanup'), // If this returns a promise, run will wait for it to be resolved before moving on to the next
+	],
+	{ quitOnFail: true }
+); // Default for options.quitOnDefault is false.
 ```
 
 I hope you find this package usefull!
