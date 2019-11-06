@@ -8,7 +8,7 @@
 	"scripts": {
 		"build": "cross-env NODE_ENV=production rollup -c && tsc",
 		"test": "cross-env NODE_ENV=development rollup -c",
-		"test:bare": "cross-env NODE_ENV=test rollup -c && node dist",
+		"test:bare": "cross-env NODE_ENV=test rollup -c && node dist/index.cjs.js",
 		"lint": "prettier --write \"./**\"",
 		"lint:test": "prettier --check \"./**\"",
 		"preversion": "npm run test && npm run lint:test && npm run build",
