@@ -4,7 +4,7 @@ import run from './run';
 export default (command: CommandCaller | CommandCaller[], options?: CommandOptions) => {
 	return {
 		name: 'command',
-		generateBundle: async () => {
+		writeBundle: async () => {
 			let inputs: CommandCaller[] = [];
 
 			if (!Array.isArray(command)) {
