@@ -1,0 +1,41 @@
+{
+	"name": "rollup-plugin-run",
+	"version": "0.0.0",
+	"description": "Run commands and call functions when bundles are generated",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"typings": "typings",
+	"scripts": {
+		"build": "cross-env NODE_ENV=production rollup -c && tsc",
+		"test": "cross-env NODE_ENV=development rollup -c",
+		"test:bare": "cross-env NODE_ENV=test rollup -c && node dist",
+		"lint": "prettier --write \"./**\"",
+		"lint:test": "prettier --check \"./**\"",
+		"preversion": "npm run test && npm run lint:test && npm run build",
+		"postversion": "git push && git push --tags && rm -rf build/temp && npm publish"
+	},
+	"files": [
+		"dist",
+		"types"
+	],
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"acorn": "^7.1.0",
+		"chalk": "^2.4.2",
+		"cross-env": "^6.0.3",
+		"prettier": "^1.18.2",
+		"rollup": "^1.26.3",
+		"rollup-plugin-commonjs": "^10.1.0",
+		"rollup-plugin-execute": "^1.1.1",
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"rollup-plugin-typescript": "^1.0.1",
+		"tslib": "^1.10.0",
+		"typescript": "^3.7.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Vehmloewff/rollup-plugin-run"
+	}
+}
