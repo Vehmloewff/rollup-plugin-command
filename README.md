@@ -1,35 +1,35 @@
-# rollup-plugin-run
+# rollup-plugin-command
 
 Run commands and call functions when bundles are generated
 
 ## Installation
 
 ```sh
-npm i -D rollup-plugin-run
+npm i -D rollup-plugin-command
 ```
 
 ## Usage
 
 ```js
 // rollup.config.js
-import run from 'rollup-plugin-run';
+import command from 'rollup-plugin-command';
 
 export default {
 	// ...
 	plugins: [
 		// ...
-		run(`node tests.js`),
+		command(`node tests.js`),
 	],
 	// ...
 };
 ```
 
 ```js
-run(require('tests.js'));
+command(require('tests.js'));
 ```
 
 ```js
-run(
+command(
 	[
 		`npm test`, // The next command will not be executed until this one is finished
 		require('./scripts/cleanup'), // If this returns a promise, this plugin will wait for it to be resolved before moving on to the next

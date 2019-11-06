@@ -3,7 +3,7 @@ import run from './run';
 
 export default (command: CommandCaller | CommandCaller[], options?: CommandOptions) => {
 	return {
-		name: 'run',
+		name: 'command',
 		generateBundle: async () => {
 			let inputs: CommandCaller[] = [];
 

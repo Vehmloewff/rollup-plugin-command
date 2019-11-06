@@ -1,5 +1,5 @@
-import run from './src';
+import command from './src';
 
-run([() => console.log('hello 1'), `echo hello-2`, `node test-colors.js`], {
+command([() => console.log('hello 1'), `echo hello-2`, `node test-colors.js`], {
 	exitOnFail: true,
 }).generateBundle();
