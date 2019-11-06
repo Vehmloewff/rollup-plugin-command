@@ -2,8 +2,9 @@ import { CommandCaller, CommandOptions } from './command';
 import { spawn } from 'child_process';
 
 export default async (command: CommandCaller, options: CommandOptions) => {
-	if (typeof command === "function") return await command();
-	if (typeof command !== "string") return console.error(`command must be a function or a string.  Recieved type ${typeof command}`);
+	if (typeof command === 'function') return await command();
+	if (typeof command !== 'string')
+		return console.error(`command must be a function or a string.  Recieved type ${typeof command}`);
 
 	await new Promise((resolve) => {
 		spawn(command, {

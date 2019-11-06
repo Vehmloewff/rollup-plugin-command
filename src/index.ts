@@ -1,7 +1,7 @@
 import { Command, CommandOptions, CommandCaller } from './command';
 import run from './run';
 
-export default (command: CommandCaller|CommandCaller[], options?: CommandOptions) => {
+export default (command: CommandCaller | CommandCaller[], options?: CommandOptions) => {
 	return {
 		name: 'run',
 		generateBundle: async () => {
