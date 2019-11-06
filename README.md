@@ -32,7 +32,7 @@ run(require('tests.js'));
 run(
 	[
 		`npm test`, // The next command will not be executed until this one is finished
-		require('./scripts/cleanup'), // If this returns a promise, run will wait for it to be resolved before moving on to the next
+		require('./scripts/cleanup'), // If this returns a promise, this plugin will wait for it to be resolved before moving on to the next
 	],
 	{ quitOnFail: true }
 ); // Default for options.quitOnDefault is false.
