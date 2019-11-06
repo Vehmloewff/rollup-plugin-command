@@ -1,6 +1,7 @@
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import execute from 'rollup-plugin-execute';
+import pkg from './package.json';
 import typescript from 'rollup-plugin-typescript';
 
 const sourcemap = true;
@@ -11,7 +12,9 @@ const sharedOutputOptions = {
 	sourcemap,
 };
 
-const output = { file: 'dist/index.js', format: prod ? 'esm' : 'cjs', ...sharedOutputOptions };
+const output = [{ file: pkg.main, format: 'cjs', ...sharedOutputOptions }];
+
+if (prod) output.push({ file: pkg.module, format: 'esm', ...sharedOutputOptions });
 
 export default {
 	input: prod ? 'src/index.ts' : 'test.ts',

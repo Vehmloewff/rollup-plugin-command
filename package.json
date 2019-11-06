@@ -2,8 +2,8 @@
 	"name": "rollup-plugin-command",
 	"version": "1.0.4",
 	"description": "Run commands and call functions when bundles are generated",
-	"main": "dist/index.js",
-	"module": "dist/index.js",
+	"main": "dist/index.cjs.js",
+	"module": "dist/index.esm.js",
 	"typings": "typings",
 	"scripts": {
 		"build": "cross-env NODE_ENV=production rollup -c && tsc",
