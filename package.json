@@ -1,5 +1,5 @@
 {
-	"name": "rollup-plugin-run",
+	"name": "rollup-plugin-command",
 	"version": "1.0.0",
 	"description": "Run commands and call functions when bundles are generated",
 	"main": "dist/index.js",
@@ -34,8 +34,9 @@
 		"tslib": "^1.10.0",
 		"typescript": "^3.7.2"
 	},
+	"homepage": "https://github.com/Vehmloewff/rollup-plugin-command#readme",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Vehmloewff/rollup-plugin-run"
+		"url": "https://github.com/Vehmloewff/rollup-plugin-command"
 	}
 }
