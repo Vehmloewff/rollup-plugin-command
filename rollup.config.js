@@ -25,7 +25,7 @@ export default {
 			preferBuiltins: true,
 		}),
 		commonjs(),
-		!prod && !test && execute(`node dist/index.js`),
+		!prod && !test && execute(`node ${pkg.main}`),
 		typescript({
 			typescript: require('typescript'),
 		}),
