@@ -1,6 +1,6 @@
 {
 	"name": "rollup-plugin-run",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Run commands and call functions when bundles are generated",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
