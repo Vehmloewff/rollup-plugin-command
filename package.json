@@ -16,7 +16,7 @@
 	},
 	"files": [
 		"dist",
-		"types"
+		"typings"
 	],
 	"keywords": [],
 	"author": "",
