@@ -35,7 +35,7 @@ command(
 		require('./scripts/cleanup'), // If this returns a promise, this plugin will wait for it to be resolved before moving on to the next
 	],
 	{ exitOnFail: true }
-); // Default for options.quitOnDefault is false.
+); // Default for options.exitOnDefault is false.
 ```
 
 I hope you find this package usefull!
