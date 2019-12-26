@@ -7,6 +7,8 @@ export default async (command: CommandCaller, options: CommandOptions) => {
 		return console.error(`command must be a function or a string.  Recieved type ${typeof command}`);
 
 	await new Promise((resolve) => {
+		if (!options.wait) resolve();
+
 		spawn(command, {
 			shell: true,
 			stdio: 'inherit',
