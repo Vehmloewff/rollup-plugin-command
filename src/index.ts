@@ -2,7 +2,7 @@ import { CommandOptions, CommandCaller, defaultCommandOptions } from './command'
 import run from './run';
 
 export default (command: CommandCaller | CommandCaller[], options?: CommandOptions) => {
-	options = Object.assign({}, options, defaultCommandOptions);
+	options = Object.assign({}, defaultCommandOptions, options);
 
 	let called = false;
 
