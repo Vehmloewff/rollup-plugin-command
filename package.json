@@ -11,8 +11,7 @@
 		"test:bare": "cross-env NODE_ENV=test rollup -c && node dist/index.cjs.js",
 		"lint": "prettier --write \"./**\"",
 		"lint:test": "prettier --check \"./**\"",
-		"preversion": "npm run test && npm run lint:test && npm run build",
-		"postversion": "git push && git push --tags && rm -rf build/temp && npm publish"
+		"preversion": "npm run test && npm run lint:test && npm run build"
 	},
 	"files": [
 		"dist",
