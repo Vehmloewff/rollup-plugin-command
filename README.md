@@ -37,7 +37,7 @@ command(
 		// one is finished.
 
 		require('./scripts/cleanup').someFunc, // If this returns a
-		// promise, and `options.wait` is true (which is default), this
+		// promise, and `options.wait` is true (it's false by default), this
 		// plugin will wait for it to be resolved before moving on to the
 		// next command or finishing the build.
 	],
@@ -58,7 +58,7 @@ interface CommandOptions {
 	// Default is false.
 
 	wait?: boolean; // If the the build should wait for the commands to
-	// be executed.  Default is true.
+	// be executed.  Default is false.
 }
 ```
 
